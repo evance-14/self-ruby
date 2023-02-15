@@ -2,16 +2,27 @@
 #owns the currently executing code.
 
 #inside an instance method
+# require 'pry'
+# class Ghost
+#     def reflect
+#         self
+#     end
+# end
+#g = Ghost.new
+#g.reflect will create an instance of Ghost class
+
+#binding.pry
+
+#inside a class method
 require 'pry'
 class Ghost
-    def reflect
+    def self.reflect
         self
     end
 end
 
-#reflect is a instance method belonging to object we created via Ghost
+#above, reflect is a class method of Ghost
+#method.self points the class
 
-g = Ghost.new
-#g.reflect will create an instance of Ghost class
-
+#Ghost.reflect
 binding.pry
